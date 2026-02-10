@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Chửi</title>
+  <style>
+    body{margin:0;height:100vh;background:#000;color:#fff;font-family:Segoe UI;display:flex;justify-content:center;align-items:center}
+    .chat{width:340px;height:600px;background:#111;border-radius:18px;overflow:hidden;box-shadow:0 0 30px #000;display:flex;flex-direction:column}
+    .header{background:#075e54;padding:10px;display:flex;align-items:center;gap:10px}
+    .avatar{width:36px;height:36px;background:#333;border-radius:50%;display:flex;justify-content:center;align-items:center;font-weight:bold}
+    .messages{flex:1;padding:12px;overflow-y:auto;background:#0a0a0a;display:flex;flex-direction:column;gap:8px}
+    .msg{max-width:85%;padding:10px 12px;border-radius:16px;line-height:1.4}
+    .sent{background:#0084ff;color:#fff;border-bottom-right-radius:4px;align-self:flex-end}
+    .received{background:#262626;color:#fff;border-bottom-left-radius:4px;align-self:flex-start}
+  </style>
+</head>
+<body>
+  <div class="chat">
+    <div class="header">
+      <div class="avatar">X</div>
+      <div>Thằng kia</div>
+    </div>
+    <div class="messages" id="chat"></div>
+  </div>
+
+  <script>
+    const msgs = [
+      {t:"r",txt:"Ê mày sao vậy"},
+      {t:"s",txt:"Sao cái đầu buồi mày thằng chó"},
+      {t:"s",txt:"Mặt mày như bị xe tải cán nát rồi hầm lại thành đống thịt thối"},
+      {t:"s",txt:"Não mày chắc bị mẹ mày ném vào bồn cầu từ lúc sinh ra"},
+      {t:"s",txt:"Cặc mày ngắn tới mức dùng kính hiển vi còn không thấy, chắc để chọc lỗ kim thôi"},
+      {t:"s",txt:"Đồ con hoang mất dạy, đồ rác rưởi, sống thừa, chết sớm cho đỡ ô nhiễm không khí"},
+      {t:"s",txt:"Mày là cục cứt khô dính dưới đế giày tao, đồ phân bón cho đất"},
+      {t:"s",txt:"Đời mày chỉ đáng giá bằng 1 đồng xu rơi xuống cống, đồ lồn"},
+      {t:"s",txt:"Tao chửi mày tới khi mày tự tử hoặc tự block tao, đồ khốn nạn"},
+      {t:"s",txt:"Đồ đĩ đực, đồ rác thải nhân loại, chết mẹ mày đi cho tao đỡ phải nhìn cái mặt lồn của mày"}
+    ];
+
+    const chat = document.getElementById("chat");
+    msgs.forEach(m => {
+      const div = document.createElement("div");
+      div.className = `msg ${m.t==="s"?"sent":"received"}`;
+      div.textContent = m.txt;
+      chat.appendChild(div);
+    });
+    chat.scrollTop = chat.scrollHeight;
+  </script>
+</body>
+  </html>01262626div.textContentdiv.classNameIndex.html
+chat.scrollTopIndex.html
